@@ -9,8 +9,8 @@ function App() {
   return (
     <>
       {/* <LogIn /> */}
-      <label>
-        <input type='text' >
+      <label >
+        <input value={} type="text" />
       </label>
       <button onClick={(e) => event(e)}>Event On Daddy</button>
     </>
