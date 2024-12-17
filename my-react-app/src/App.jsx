@@ -1,14 +1,15 @@
 // import List from "./List.jsx"
 // import Hooks from "./Hooks.jsx"
 // import Profilepic from "./Profilepic.jsx"
-
-import DigitalClock from "./DigitalClock.jsx"
 // import Picker from "./Picker.jsx"
+
+import Comp1 from "./Comp1.jsx"
+
 
 function App() {
 
   return (<>
-    <DigitalClock />
+    <Comp1 />
     
 
   </>)

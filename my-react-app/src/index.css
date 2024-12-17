@@ -125,7 +125,7 @@ ol{
 } 
   */
 
-body{
+/* body{
   background-image: url(/src/assets/bacimg.jpg);
   background-position: center;
   background-size: cover;
@@ -150,4 +150,9 @@ body{
   font-family: monospace;
   text-shadow: 4px 4px 5px hsla(0, 0%, 19%, 0.822);
   
+} */
+
+.box{
+  border: 1px solid;
+  padding: 1rem;
 }
