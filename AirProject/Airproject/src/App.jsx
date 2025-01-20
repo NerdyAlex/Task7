@@ -1,19 +1,13 @@
 
 // import SignUp from './SignUp.jsx';
-// import LogIn from './LogIn.jsx';
+import LogIn from './LogIn.jsx';
 
 function App() {
 
-  const event = (e) => console.log(e.target.value) 
+   
 
   return (
-    <>
-      {/* <LogIn /> */}
-      <label >
-        <input value={} type="text" />
-      </label>
-      <button onClick={(e) => event(e)}>Event On Daddy</button>
-    </>
+    <LogIn /> 
   )
 }
 
@@ -43,4 +37,12 @@ accessKey
 ""
 ariaAtomic
 : 
-null*/
+null
+
+
+const event = (e) => console.log(e.target.value)
+<label >
+        <input value={} type="text" />
+      </label>
+      <button onClick={(e) => event(e)}>Event On Daddy</button>
+*/

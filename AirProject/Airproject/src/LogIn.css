@@ -15,7 +15,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-.btn ul {
+.btn nav {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +24,7 @@ body {
     
 
 }
-.btn ul li{
+.btn nav button{
     border-bottom: 0.5px solid hsla(0, 66%, 49%, 1);
     color: hsla(0, 0%, 31%, 1);
 }
@@ -37,7 +37,7 @@ body {
     width: 90%;
     font-family: "Nunito", sans-serif;
     font-weight: 500;
-    font-size: 0.75rem;
+    font-size: 0.78rem;
     margin-top: -0.5rem;
 }
 .remember-me{
