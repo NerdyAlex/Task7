@@ -31,3 +31,35 @@
         @apply font-inter text-[#636363] w-[100%] border-2 h-[50px] rounded-md border-[#63636354] pl-3  outline-none
     }
 }
+
+@layer components{
+    .navbar{
+        @apply h-[15%] w-screen text-[16px]  px-6 py-2 pt-8 bg-[#ED1D24] font-nunito 
+        font-[700] text-[white] 
+    }
+
+}
+@layer components {
+    .layer{
+        @apply -z-0 absolute right-[3%] top-2
+    }
+}
+
+@layer components {
+    .hover {
+        @apply hover:fill-[white] hover:cursor-pointer
+    }
+}
+
+@layer components {
+    .outletcard {
+        @apply w-[360px] h-[150px] rounded border-[1px] border-black shadow-slate-300 shadow-md
+    }
+}
+@layer components {
+    .container {
+        @apply h-[85%] w-screen grid grid-cols-2 border-black 
+        border-[2px] 
+    }
+
+}
