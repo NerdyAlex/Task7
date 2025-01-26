@@ -53,13 +53,22 @@
 
 @layer components {
     .outletcard {
-        @apply w-[360px] h-[150px] rounded border-[1px] border-black shadow-slate-300 shadow-md
+        @apply w-[380px] h-[170px] px-3 py-3
+        flex flex-col rounded shadow-slate-300 shadow-md
     }
 }
 @layer components {
     .container {
-        @apply h-[85%] w-screen grid grid-cols-2 border-black 
-        border-[2px] 
+        @apply w-[70%] grid grid-cols-[380px_380px_380px] justify-start
+        gap-10 p-10 mt-14 gap-x-16
+        
     }
 
+
+}
+
+@layer components {
+    .cardEffect{
+        @apply hover:transform hover:cursor-pointer hover:shadow-slate-500 hover:shadow-2xl hover:scale-105
+    }
 }

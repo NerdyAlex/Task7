@@ -1,9 +1,15 @@
 import layer from "./assets/Layer_1.png"
+import point from './assets/pointimg.png'
+import point2 from './assets/pointimg2.png'
+import point3 from './assets/pointimg3.png'
+import greenup from './assets/greenup.png'
+import reddown from './assets/reddown.png'
+import arrowleft from './assets/arrowleft.png'
 
 export default function Home(){
 
     return(
-        <div className="w-screen h-screen overflow-x-hidden flex flex-col items-center">
+        <div className="w-screen h-screen overflow-x-hidden flex flex-col">
             <div className="relative navbar flex items-center justify-between">
                 <img src={layer} className="layer" />
                 <div>
@@ -25,13 +31,32 @@ export default function Home(){
                 </div>
             </div>
 
-            <div className="container  mx-5 w-80%  mt-10">
+            <div className="container ">
                 
-                <div className="outletcard">hello</div>
-                <div className="outletcard">Hi</div>
-                <div className="outletcard">Supp</div>
-                <div className="outletcard">Create</div>
+                <div className="outletcard cardEffect">
+                    <div className="flex items-start justify-between">
+                        <div className="flex items-center justify-start "><img className="w-18 h-18" src={point} /><p className="font-nunito text-[59px] ml-1 text-gray font-light">70</p></div>
+                        <div className="flex items-center mt-1 px-[0.3rem] py-[0.2rem] font justify-center border-green-600 border-[1px] rounded-md"><img src={greenup} /><p>3%</p></div>
+                    </div>
+                    <div className="mt-7 flex items-center justify-between"><p>Approved outlets in the last month</p> <img src={arrowleft}/></div>
+                </div>
+                <div className="outletcard cardEffect">
+                    <div className="flex items-start justify-between">
+                        <div className="flex items-center justify-start "><img className="w-18 h-18" src={point2} /><p className="font-nunito text-[59px] ml-1 text-gray font-light">24</p></div>
+                        <div className="flex items-center mt-1 px-[0.3rem] py-[0.2rem] font justify-center border-red-600 border-[1px] rounded-md"><img src={reddown} /><p>10%</p></div>
+                    </div>
+                    <div className="mt-7 flex items-center justify-between"><p>Declined outlets in the last month</p> <img src={arrowleft} /></div>
+                </div>
 
+                <div className="outletcard cardEffect">
+                    <div className="flex items-start justify-between">
+                        <div className="flex items-center justify-start "><img className="w-18 h-18" src={point3} /><p className="font-nunito text-[59px] ml-1 text-gray font-light">70</p></div>
+                    </div>
+                    <div className="mt-7 flex items-center justify-between"><p>Pending outlets</p> <img src={arrowleft} /></div>
+                </div>
+
+                {/* <div className="outletcard">box2</div>
+                <div className="outletcard">box3</div> */}
             </div>
         </div>
     )
