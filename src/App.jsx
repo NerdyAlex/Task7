@@ -4,7 +4,9 @@ import Login from './LogIn.jsx'
 import logo from './assets/logo.png'
 import logoRed from './assets/logoRed.png'
 import Splash from "./Splash.jsx"
-import Dashboard from './Dashboard.jsx'
+import Home from './Home.jsx'
+import Outlet from './Outlet.jsx'
+
 
 
 
@@ -21,7 +23,8 @@ function App() {
           <Routes>
             <Route  path='/' element={<Splash logo={logo} />}/>
             <Route path='/login' element={<Login logo={logoRed} />} />
-            <Route path='/home' element={<Dashboard />} />
+            <Route path='/home' element={<Home />} />
+            <Route path='/outlet-creation' element={<Outlet />} /> 
           </Routes>
         </Router> 
             

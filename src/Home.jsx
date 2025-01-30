@@ -4,19 +4,32 @@ import point2 from './assets/pointimg2.png'
 import point3 from './assets/pointimg3.png'
 import greenup from './assets/greenup.png'
 import reddown from './assets/reddown.png'
-import arrowleft from './assets/arrowleft.png'
+import arrowright from './assets/arrowright.png'
+import arrowright2 from './assets/arrowright2.png'
+import location from './assets/location.png'
+import { useNavigate } from "react-router-dom"
 
 export default function Home(){
+    const navi = useNavigate()
+
+    function outlet(){
+        setTimeout(() => {
+            navi('/outlet-creation')
+        }, 2800)
+    }
+    
 
     return(
-        <div className="w-screen h-screen overflow-x-hidden flex flex-col">
-            <div className="relative navbar flex items-center justify-between">
+        <div className="w-screen h-screen overflow-x-hidden flex flex-col items-center">
+            <div className="navbar flex items-center justify-between">
                 <img src={layer} className="layer" />
                 <div>
 
                     <p>Hi Lexy,</p>
                     <p>Good Afternoon</p>
                 </div>
+
+                
 
                 <div className="z-10  flex justify-between w-[150px] ">
                     <svg className="cursor-pointer w-8 h-8 fill-[white] stroke-[white] stroke-[2px] text-[white]" viewBox="0 0 40 40">
@@ -31,28 +44,36 @@ export default function Home(){
                 </div>
             </div>
 
+            <div className="outlet" onClick={outlet}>
+                <div className="flex items-center">
+                    <img src={location} />
+                    <p className="text-white ml-3">Outlets Creation</p>
+                </div>
+                <img src={arrowright2} />
+            </div>
+
             <div className="container ">
                 
                 <div className="outletcard cardEffect">
                     <div className="flex items-start justify-between">
-                        <div className="flex items-center justify-start "><img className="w-18 h-18" src={point} /><p className="font-nunito text-[59px] ml-1 text-gray font-light">70</p></div>
-                        <div className="flex items-center mt-1 px-[0.3rem] py-[0.2rem] font justify-center border-green-600 border-[1px] rounded-md"><img src={greenup} /><p>3%</p></div>
+                        <div className="flex items-center justify-start "><img className="w-18 h-18" src={point} /><p className="font-nunito text-[59px] ml-4 text-gray font-light">70</p></div>
+                        <div className=" w-[68px] flex items-center mt-1 px-[0.3rem] py-[0.2rem] justify-between border-green-600 border-[1px] rounded-md"><img src={greenup} /><p classname='sm:text-[90%] '>9%</p></div>
                     </div>
-                    <div className="mt-7 flex items-center justify-between"><p>Approved outlets in the last month</p> <img src={arrowleft}/></div>
+                    <div className="mt-7 flex items-center justify-between"><p>Approved outlets in the last month</p> <img src={arrowright}/></div>
                 </div>
                 <div className="outletcard cardEffect">
                     <div className="flex items-start justify-between">
-                        <div className="flex items-center justify-start "><img className="w-18 h-18" src={point2} /><p className="font-nunito text-[59px] ml-1 text-gray font-light">24</p></div>
-                        <div className="flex items-center mt-1 px-[0.3rem] py-[0.2rem] font justify-center border-red-600 border-[1px] rounded-md"><img src={reddown} /><p>10%</p></div>
+                        <div className="flex items-center justify-start "><img className="w-18 h-18" src={point2} /><p className="font-nunito text-[59px] ml-4 text-gray font-light">24</p></div>
+                        <div className=" w-[68px] flex items-center mt-1 px-[0.3rem] py-[0.2rem] justify-between border-red-600 border-[1px] rounded-md"><img src={reddown} /><p classname='sm:text-[90%] ml-2'>10%</p></div>
                     </div>
-                    <div className="mt-7 flex items-center justify-between"><p>Declined outlets in the last month</p> <img src={arrowleft} /></div>
+                    <div className="mt-7 flex items-center justify-between"><p>Declined outlets in the last month</p> <img src={arrowright} /></div>
                 </div>
 
                 <div className="outletcard cardEffect">
                     <div className="flex items-start justify-between">
-                        <div className="flex items-center justify-start "><img className="w-18 h-18" src={point3} /><p className="font-nunito text-[59px] ml-1 text-gray font-light">70</p></div>
+                        <div className="flex items-center justify-start "><img className="w-18 h-18" src={point3} /><p className="font-nunito text-[59px] ml-4 text-gray font-light">70</p></div>
                     </div>
-                    <div className="mt-7 flex items-center justify-between"><p>Pending outlets</p> <img src={arrowleft} /></div>
+                    <div className="mt-7 flex items-center justify-between"><p>Pending outlets</p> <img src={arrowright} /></div>
                 </div>
 
                 {/* <div className="outletcard">box2</div>

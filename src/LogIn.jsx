@@ -2,8 +2,8 @@
 import {useState} from 'react'
 import { useNavigate } from "react-router-dom"
 
-import eye1 from './assets/eye.png'
-import eye2 from './assets/eye1.png'
+import eye1 from './assets/eye1.png'
+import eye2 from './assets/eye3.png'
 
 export default function Login({logo}){
 
@@ -58,7 +58,7 @@ export default function Login({logo}){
                             <div className="flex relative">
                                 <input id="highlight" value={code} onChange={(e) => {setCode(e.target.value),  highlight(e)}}
                                  placeholder="Enter Password" className="inputfield text-[13px]" type={see ? 'text' : "password"} name="passcode" />
-                                <img onClick={hide} src={see ? eye1 : eye2} id='eye' className="absolute mt-[0.9rem] left-[295px]" />
+                                <img onClick={hide} src={see ? eye1 : eye2} id='eye' className="cursor-pointer w-5 h-5 absolute mt-[0.9rem] left-[295px]" />
                             </div>
                         </label>
 
