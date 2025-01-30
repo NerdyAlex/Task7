@@ -13,6 +13,10 @@ export default function Outlet(){
                     <p className="pl-3">Outlet Creation</p>
                 </div>
             </div>
+
+            <div className="mt-14 relative rounded-full h-2 w-[75%] bg-slate-300">
+                <div className="absolute bg-redload h-2 rounded-full w-1/4"></div>
+            </div>
         </div>
     )
 }
