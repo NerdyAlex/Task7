@@ -24,10 +24,6 @@ export default function Login({logo}){
     }
 
     const hide = () => {
-<<<<<<< HEAD
-=======
-        
->>>>>>> ac46409fc0247d51eb0b0d9dce4ce5cfb88774e0
         setSee(!see)
     }
 
@@ -62,11 +58,9 @@ export default function Login({logo}){
                             <div className="flex relative">
                                 <input id="highlight" value={code} onChange={(e) => {setCode(e.target.value),  highlight(e)}}
                                  placeholder="Enter Password" className="inputfield text-[13px]" type={see ? 'text' : "password"} name="passcode" />
-<<<<<<< HEAD
+
                                 <img onClick={hide} src={see ? eye1 : eye2} id='eye' className="cursor-pointer w-5 h-5 absolute mt-[0.9rem] left-[295px]" />
-=======
-                                <img onClick={hide}  src={see ? eye1 : eye2} id='eye' className="opacity-1 w-[22px] h-[22px] text-black absolute mt-[0.9rem] left-[295px]" />
->>>>>>> ac46409fc0247d51eb0b0d9dce4ce5cfb88774e0
+
                             </div>
                         </label>
 
