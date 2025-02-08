@@ -22,7 +22,7 @@ export default function Home(){
     
 
     return(
-        <div className="w-screen h-screen overflow-x-hidden flex flex-col items-center">
+        <div className="w-screen h-screen  flex flex-col items-center">
             <div className=" navbar flex items-center justify-between">
                 <img src={layer} className="layer" />
                 <div>
@@ -56,8 +56,8 @@ export default function Home(){
 
            
             
-            <div onClick={() => { outlet() }} className=" flex justify-center w-screen">
-                <div className="w-[80%] hover:cursor-pointer justify-between px-6 py-[0.64rem] rounded-md mt-16 bg-redload flex items-center ">
+            <div  className=" flex justify-center w-screen">
+                <div onClick={() => { outlet() }} className="w-[80%] hover:cursor-pointer justify-between px-6 py-[0.64rem] rounded-md mt-16 bg-redload flex items-center ">
                     <div className="flex items-center">
                         <img src={location} />
                         <p className="text-white ml-3">Outlets Creation</p>
@@ -83,6 +83,7 @@ export default function Home(){
                     </div>
                     <div className="mt-7 flex items-center justify-between"><p>Declined outlets in the last month</p> <img src={arrowright} /></div>
                 </div>
+                
 
                 <div className="outletcard cardEffect">
                     <div className="flex items-start justify-between">

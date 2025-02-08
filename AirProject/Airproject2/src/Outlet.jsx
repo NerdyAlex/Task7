@@ -1,11 +1,55 @@
 import layer from "./assets/Layer_1.png"
 import arrowleft from './assets/arrowleft.png'
+import Form1 from './pages/Form1.jsx'
+import Form3 from './pages/Form3.jsx'
+import Form2 from './pages/Form2.jsx'
+import { useState } from "react"
+
+import { useNavigate } from "react-router-dom"
+
 
 
 export default function Outlet(){
+
+    const navi = useNavigate()
+
+    function backhome() {
+        navi('/home')
+    }
+
+    const pages = [
+        <Form1/>,
+        <Form2 />,
+        <Form3 />,
+        <Form1 />
+    ]
+   const [index, setIndex] = useState(0)
+
+   const next = () => {
+        if(index == pages.length - 1){
+            setIndex(index)
+        }
+        else{
+            setIndex(i => i + 1)
+        }
+    }
+
+    const back = () => {
+        if(index == 0){
+            backhome() 
+        }
+        else{
+            setIndex(i => (i - 1))
+        }
+        
+       
+        
+
+    }
+
     return(
-        <div className="w-screen h-screen overflow-x-hidden flex flex-col items-center">
-            <div className="navbar flex items-center justify-between">
+        <div className="w-[100%] overflow-x-hidden flex flex-col items-center">
+            <div className="navbar  flex items-center justify-between">
                 <img className="layer" src={layer}/>
 
                 <div className="flex items-center">
@@ -14,10 +58,24 @@ export default function Outlet(){
                 </div>
             </div>
 
-            <div className="mt-14 relative rounded-full h-2 w-[75%] bg-slate-300">
-                <div className="absolute bg-redload h-2 rounded-full w-1/4"></div>
+            <div className="w-[100%] flex flex-col mt-14 mb-14  items-center justify-center">
+                <div className=" relative rounded-full h-1.5 w-[75%] bg-slate-300">
+                    <div className="absolute bg-redload h-1.5 rounded-full w-1/3 left-0"></div>
+                </div>
+                
             </div>
+           
+            <div className=" flex w-[90%] mb-10 flex-col">
+                {pages[index]}
+                <div className="px-7 flex w-[100%] mt-24 justify-between">
+                    <button  onClick={back} className="btns bg-white text-redload">Back</button>
+                    
+                    <button onClick={next} className="btns bg-redload text-white">Next</button>
+                </div>
+            </div>
+           
+
+
         </div>
     )
 }
-

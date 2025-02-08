@@ -35,7 +35,7 @@
 @layer components{
     .navbar{
     @apply relative h-[82px] w-screen text-[16px]  px-6 py-2 pt-8 bg-[#ED1D24] font-nunito 
-        font-[700] text-[white] 
+        font-[700] text-[white]
     }
 
 }
@@ -103,4 +103,56 @@
     }
 } */
 
+@media (max-width: 539px) {
+        .gridContainer > label > p{
+            font-size: 12px;
+        }
+    }
 
+
+@layer components{
+    .tags{
+        @apply font-inter font-[550] text-[15px] text-gray
+    }
+}
+@layer components {
+    .inputs {
+        @apply w-[90%] text-[14px] my-0.5 px-3 py-2 border-[2px] outline-none border-neutral-200  rounded 
+    }
+}
+@layer components {
+    .btns {
+        @apply w-[150px] h-[60px] border-[1px] rounded-[8px] border-redload 
+    }
+}
+
+@layer components{
+    .gridContainer{
+        @apply w-[90%] 
+        gap-x-7 gap-y-4
+        grid grid-cols-[50%_50%]
+    }
+}
+
+@layer components{
+    .input2{
+        @apply border-neutral-100 border-[2px] h-[50px] w-[100%] text-[14px] px-3 py-2  outline-none   rounded 
+    }
+}
+@layer components {
+    .select{
+        @apply  focus:border-redload outline-none h-[50px] text-[14px] text-gray px-3 py-2 border-neutral-400 rounded border-[2px] w-[90%]
+}
+}
+
+@layer components{
+    .tagxs{
+        @apply font-inter font-[600] mb-2 text-[14px] text-zinc-500
+    }
+}
+
+@layer components {
+    .checks {
+        @apply w-[20px] h-[20px] checked:accent-redload rounded-[4px] border-[1px]
+    }
+}
