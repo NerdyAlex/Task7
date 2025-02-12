@@ -1,8 +1,11 @@
 import cam from '/src/assets/cam.png'
 
+
 export default function Form3(){
 
     return(
+        
+
         <div>
             <div className="px-4 py-2 mb-2">
                 <p className="font-inter font-[600] text-xl text-gray">Outlet Checklist</p>
