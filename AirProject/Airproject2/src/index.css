@@ -146,7 +146,7 @@
 }
 @layer components {
     .lefty {
-        @apply transition-all ease-out duration-700
+        @apply transition-all ease-out duration-500
        }
 }
 @layer components{

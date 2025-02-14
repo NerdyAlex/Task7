@@ -4,11 +4,12 @@ import Form1 from './pages/Form1.jsx'
 import Form3 from './pages/Form3.jsx'
 import Form2 from './pages/Form2.jsx'
 
+
 import { useState } from "react"
 
 import { useNavigate } from "react-router-dom"
 
-import { createContext } from "react"
+
 
 
 
@@ -16,7 +17,7 @@ import { createContext } from "react"
 
 export default function Outlet(){
 
-    const StepContext = createContext()
+    
 
     const [step, setStep] = useState(0) 
     

@@ -2,8 +2,14 @@ import layer from "./assets/Layer_1.png"
 import arrowleft from './assets/arrowleft.png'
 import { useNavigate } from "react-router-dom"
 
+import { useData } from "./UseData.jsx"
+
+
+
 
 export default function Summary(){
+
+    const {data} = useData()
 
     const navi = useNavigate()
 
@@ -11,6 +17,7 @@ export default function Summary(){
         navi('/home')
     }
     return(
+        
         <div className="w-[100%] mb-14 overflow-x-hidden flex flex-col items-center">
             <div className="navbar  flex items-center justify-between">
                 <img className="layer" src={layer}/>
@@ -21,23 +28,24 @@ export default function Summary(){
             </div>
 
             <div className=" flex w-[90%] mt-12 mb-10 flex-col">
+                
                 <p className="tags underline underline-offset-[3px] mb-4 text-[18px]">Agent Details</p>
                 <div className="mb-12  flex flex-col">
                     <label className="w-[100%] mb-4" htmlFor="msisdn">
                         <p className="tags">Airtel MSISDN</p>
-                        <input id="msisdin"  className="inputs" type="tel" placeholder="+234" />
+                        <input id="msisdin" placeholder={data.datafile1.value} readOnly className="inputs" type="tel"/>
                     </label>
                     <label className="w-[100%] mb-4" htmlFor="name">
                         <p className="tags">Full Name</p>
-                        <input  id="name" className="inputs" type="tel" placeholder="Enter in Last First & Middle name format" />
+                        <input id="name" placeholder={data.datafile1.value2} disabled className="inputs" type="tel" />
                     </label>
                     <label className="w-[100%] mb-4" htmlFor="nin">
                         <p className="tags">NIN</p>
-                        <input  id="nin"  className="inputs" type="tel" placeholder="Enter NIN" />
+                        <input id="nin" placeholder={data.datafile1.value3} disabled className="inputs" type="tel"/>
                     </label>
                     <label className="w-[100%]" htmlFor="bvn">
                         <p className="tags">BVN</p>
-                        <input  id="bvn"  className="inputs" type="tel" placeholder="Enter BVN" />
+                        <input id="bvn" placeholder={data.datafile1.value4} disabled  className="inputs" type="tel"  />
                     </label>
 
                 </div>
@@ -46,26 +54,26 @@ export default function Summary(){
                 <div className="gridContainer">
                     <label htmlFor="blockNo">
                         <p className="tags ">House/Block Number</p>
-                        <input className="input2"  type="text" placeholder="Enter Input" />
+                        <input className="input2" placeholder={data.datafile2.value} disabled type="text" />
                     </label>
                     <label htmlFor="Street-name">
                         <p className="tags">Street Name</p>
-                        <input className="input2"  type="text" placeholder="Enter Input" />
+                        <input className="input2" placeholder={data.datafile2.value2} disabled type="text" />
                     </label>
                     <label htmlFor="lga">
                         <p className="tags">LGA</p>
-                        <input className="input2" type="text" placeholder="Enter Input" />
+                        <input className="input2" placeholder={data.datafile2.value3} disabled type="text" />
                     </label>
                     <label htmlFor="state">
                         <p className="tags">State</p>
-                        <input className="input2"  type="text" placeholder="Enter Input" />                    
+                        <input className="input2" placeholder={data.datafile2.value4} disabled type="text" />                    
                     </label>
                 </div>
 
                 <div className="flex mt-8 flex-col">
                     <label htmlFor="type" className="mb-4">
-                        <p className="tags">Outlet Type</p>
-                        <select className="select" name="" id="" placeholder="--Select--">
+                        <p  className="tags">Outlet Type</p>
+                        <select disabled value={data.datafile2.value5} className="select" name="" id="" >
                             <option value="">--Select--</option>
                             <option value="Kiosk">Kiosk</option>
                             <option value="Mini Shop">Mini Shop</option>
@@ -77,7 +85,7 @@ export default function Summary(){
 
                     <label htmlFor="site-id" className="mb-4">
                         <p className="tags ">Site ID</p>
-                        <select className="select" name="" id="" placeholder="--Select--">
+                        <select disabled value={data.datafile2.value6}  className="select" name="" id="">
                             <option value="">--Select--</option>
                             <option value="Kiosk">Kiosk</option>
                             <option value="Mini Shop">Mini Shop</option>
@@ -88,8 +96,8 @@ export default function Summary(){
                     </label>
 
                     <label htmlFor="deal-code" className="mb-4">
-                        <p className="tags">Partner Deal Code</p>
-                        <select className="select" name="" id="" placeholder="--Select--">
+                        <p  className="tags">Partner Deal Code</p>
+                        <select disabled value={data.datafile2.value7} className="select" name="" id="" >
                             <option value="">--Select--</option>
                             <option value="Kiosk">Kiosk</option>
                             <option value="Mini Shop">Mini Shop</option>
@@ -104,7 +112,7 @@ export default function Summary(){
             <div className="px-16 flex w-[100%] mt-24 justify-between">
                 <button onClick={backhome} className="btns bg-white text-redload">Cancel</button>
 
-                <button className="btns bg-redload text-white">Submit</button>
+                <button onClick={backhome} className="btns bg-redload text-white">Submit</button>
             </div>
             
         </div>
