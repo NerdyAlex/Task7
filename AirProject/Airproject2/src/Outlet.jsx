@@ -84,7 +84,7 @@ export default function Outlet(){
                 <img className="layer" src={layer}/>
 
                 <div className="flex items-center">
-                    <img src={arrowleft}/>
+                    <img onClick={backhome} className="hover:cursor-pointer" src={arrowleft}/>
                     <p className="pl-3">Outlet Creation</p>
                 </div>
             </div>

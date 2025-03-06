@@ -14,15 +14,16 @@ export default function Summary(){
     const navi = useNavigate()
 
     function backhome() {
-        navi('/home')
+        navi('/outlet-creation')
     }
     return(
+        // flex w-[90%] mb-10 flex-col
         
         <div className="w-[100%] mb-14 overflow-x-hidden flex flex-col items-center">
             <div className="navbar  flex items-center justify-between">
                 <img className="layer" src={layer}/>
                 <div className="flex items-center">
-                    <img src={arrowleft}/>
+                    <img onClick={() => { navi("/outlet-creation") }} className="hover:cursor-pointer" src={arrowleft}/>
                     <p className="pl-3">Summary</p>
                 </div>
             </div>
@@ -97,7 +98,7 @@ export default function Summary(){
 
                     <label htmlFor="deal-code" className="mb-4">
                         <p  className="tags">Partner Deal Code</p>
-                        <select disabled value={data.datafile2.value7} className="select" name="" id="" >
+                        <select disabled value={data.datafile2.value7} className="select" name="" id="">
                             <option value="">--Select--</option>
                             <option value="Kiosk">Kiosk</option>
                             <option value="Mini Shop">Mini Shop</option>
@@ -107,13 +108,15 @@ export default function Summary(){
                         </select>
                     </label>
                 </div>
+
+                <div className=" flex w-[100%] mt-24 justify-between">
+                    <button onClick={backhome} className="btns bg-white text-redload">Cancel</button>
+
+                    <button onClick={() => {navi('/home')}} className="btns bg-redload text-white">Submit</button>
+                </div>
             </div>
 
-            <div className="px-16 flex w-[100%] mt-24 justify-between">
-                <button onClick={backhome} className="btns bg-white text-redload">Cancel</button>
-
-                <button onClick={backhome} className="btns bg-redload text-white">Submit</button>
-            </div>
+           
             
         </div>
     )

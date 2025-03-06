@@ -6,13 +6,13 @@ export default function Form2(){
 
     const {data, updateData} = useData()
 
-    const [value, setValu1] = useState(data.datafile2.value)
-    const [value2, setValu2] = useState(data.datafile2.value2)
-    const [value3, setValu3] = useState(data.datafile2.value3)
-    const [value4, setValu4] = useState(data.datafile2.value4)
-    const [value5, setValu5] = useState(data.datafile2.value5)
-    const [value6, setValu6] = useState(data.datafile2.value6)
-    const [value7, setValu7] = useState(data.datafile2.value7)
+    const [value, setValue1] = useState(data.datafile2.value)
+    const [value2, setValue2] = useState(data.datafile2.value2)
+    const [value3, setValue3] = useState(data.datafile2.value3)
+    const [value4, setValue4] = useState(data.datafile2.value4)
+    const [value5, setValue5] = useState(data.datafile2.value5)
+    const [value6, setValue6] = useState(data.datafile2.value6)
+    const [value7, setValue7] = useState(data.datafile2.value7)
 
 
 
@@ -38,7 +38,7 @@ export default function Form2(){
             value4: value4,
             value5: value5,
             value6: value6,
-            value7: value7,
+            value7: value7
         
             
         })
@@ -59,19 +59,19 @@ export default function Form2(){
                     <div className="gridContainer">
                         <label htmlFor="blockNo">
                             <p className="tags ">House/Block Number</p>
-                            <input className="input2" value={value} onChange={e => highlightChange(e, setValu1)} type="text" placeholder="Enter Input" />
+                            <input className="input2" value={value} onChange={e => highlightChange(e, setValue1)} type="text" placeholder="Enter Input" />
                         </label>
                         <label htmlFor="Street-name">
                             <p className="tags">Street Name</p>
-                            <input className="input2" value={value2} onChange={e => highlightChange(e, setValu2)} type="text" placeholder="Enter Input" />
+                            <input className="input2" value={value2} onChange={e => highlightChange(e, setValue2)} type="text" placeholder="Enter Input" />
                         </label>
                         <label htmlFor="lga">
                             <p className="tags">LGA</p>
-                            <input className="input2" value={value3} onChange={e => highlightChange(e, setValu3)} type="text" placeholder="Enter Input" />
+                            <input className="input2" value={value3} onChange={e => highlightChange(e, setValue3)} type="text" placeholder="Enter Input" />
                         </label>
                         <label htmlFor="state">
                             <p className="tags">State</p>
-                            <input className="input2" value={value4} onChange={e => highlightChange(e, setValu4)} type="text" placeholder="Enter Input" />
+                            <input className="input2" value={value4} onChange={e => highlightChange(e, setValue4)} type="text" placeholder="Enter Input" />
                         </label>
                     </div>
                     <p className="my-4 font-inter font-[550] text-[15px] text-[#4847E0] pr-5 h-[40px]">Fetch my location coordinates</p>                
@@ -81,7 +81,7 @@ export default function Form2(){
             <div className="px-7 flex flex-col">
                 <label htmlFor="type" className="mb-4">
                     <p className="tags text-[16px]">Outlet type</p>
-                    <select value={value5} onChange={e => highlightChange(e, setValu5)} className="select" name="" id="" >
+                    <select value={value5} onChange={e => highlightChange(e, setValue5)} className="select" name="" id="" >
                         <option value="">--Select--</option>
                         <option value="Kiosk">Kiosk</option>
                         <option value="Mini Shop">Mini Shop</option>
@@ -93,7 +93,7 @@ export default function Form2(){
 
                 <label htmlFor="site-id" className="mb-4">
                     <p className="tags text-[16px]">Site ID</p>
-                    <select value={value6} onChange={e => highlightChange(e, setValu6)} className="select" name="" id="" placeholder="--Select--">
+                    <select value={value6} onChange={e => highlightChange(e, setValue6)} className="select" name="" id="" >
                         <option value="">--Select--</option>
                         <option value="Kiosk">Kiosk</option>
                         <option value="Mini Shop">Mini Shop</option>
@@ -105,7 +105,7 @@ export default function Form2(){
                 
                 <label htmlFor="deal-code" className="mb-4">
                     <p  className="tags text-[16px]">Partner Deal Code</p>
-                    <select value={value7} onChange={e => highlightChange(e, setValu7)} className="select" name="" id="" placeholder="--Select--">
+                    <select value={value7} onChange={e => highlightChange(e, setValue7)} className="select" name="" id="" >
                         <option value="">--Select--</option>
                         <option value="Kiosk">Kiosk</option>
                         <option value="Mini Shop">Mini Shop</option>
@@ -113,6 +113,8 @@ export default function Form2(){
                         <option value="DSO">DSO</option>
                         <option value="ESO">ESO</option>
                     </select>
+                    
+                    
                 </label>
 
                 

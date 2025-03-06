@@ -54,13 +54,13 @@
 
 @layer components {
     .outletcard {
-           @apply w-[100%] h-[160px] px-4 py-1 mb-12
+           @apply  h-[160px] px-4 py-1 mb-12
         flex flex-col rounded-md shadow-slate-300 shadow-md
     }
 }
 @layer components {
     .container {
-        @apply w-[85%] p-10 mt-0
+        @apply w-[100%] py-10 mt-4
         
     }
 
